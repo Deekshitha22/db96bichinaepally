@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  -
+    const horses = [
+      {
+      'Name': "Drake",
+      'Cost': "$12000",
+      'bread':"Arabian"
+      },
+      {
+      'Name': "Pam",
+      'Cost': "$7000",
+      'bread':"Shire"
+      },
+      {
+      'Name': "Swan",
+      'Cost': "$9000",
+      'bread':"Mustang"
+      },
+      ]
+  div(class="container-fluid")
+  div(class="row")
+    each horse,index in horses
+      div(class="col-sm-2 " onclick=`buy(${index})`) #{horse.Name} - #{horse.Cost} - #{horse.bread} 
+  script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }     
+    
