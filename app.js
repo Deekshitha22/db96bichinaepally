@@ -70,7 +70,7 @@ mongoose.connect(connectionString,
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/resource/horse', horseRouter);
+app.use('/horse', horseRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
 app.use('/resource', resourceRouter);
