@@ -1,4 +1,5 @@
-# fwb96bichinaepally
+# db96bichinaepally
 
 My name is Deekshitha Bichinaepally.
-[Hosted at](https://fwb96bichinaepally.herokuapp.com/)
+[Hosted at](https://db96bichinaepally.herokuapp.com/)
+Class name Horse, Attributes: Name, Cost, Weight
