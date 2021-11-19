@@ -18,6 +18,5 @@ router.put('/horse/:id', horse_controller.horse_update_put);
 router.get('/horse/:id', horse_controller.horse_detail);
 // GET request for list of all horse items.
 router.get('/horse', horse_controller.horse_list);
-/* GET detail horse page */
 
 module.exports = router;
