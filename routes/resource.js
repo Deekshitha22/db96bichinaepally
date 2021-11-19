@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
 
 // Require controller modules
 var api_controller = require('../controllers/api');
@@ -19,4 +20,11 @@ router.get('/horse/:id', horse_controller.horse_detail);
 // GET request for list of all horse items.
 router.get('/horse', horse_controller.horse_list);
 
+const secured = (req, res, next) => {
+    if (req.user) {
+        return next();
+    }
+    req.session.returnTo = req.originalUrl;
+    res.redirect("/login");
+}
 module.exports = router;

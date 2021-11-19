@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+
+  if (toShow == null)
+    h2 No instance to show
+  else
+  - let horseid = toShow._id
+  - let horsename = toShow.Name
+  - let horsecost = toShow.Cost
+  - let horseweight = toShow.Weight
+  form(id='horseform',action= actionid, method= 'GET' )
+  div
+    div.row
+      div(class='horseAttr mr-3') Horse Id is:
+      div #{horseid}
+    div.row
+      div(class='horseAttr mr-3') Horse Name is:
+      div #{horsename}
+    div.row
+      div(class='horseAttr mr-3') Horse Cost is:
+      div #{horsecost}
+    div.row
+      div(class='horseAttr mr-3') Horse Weight is:
+      div #{horseweight}
